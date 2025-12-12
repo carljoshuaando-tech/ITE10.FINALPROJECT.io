@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carl Joshua Ando | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="login-section" class="centered-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter username" />
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="login()">Login</button>
+        <p id="error-msg" style="color:red; margin-top:10px;"></p>
+    </div>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio">
+
+<header class="header">
+    <h1 class="logo">Carl Joshua Ando</h1>
+
+    <div class="right-section">
+        <a class="contact" href="https://facebook.com/YOURPROFILE" target="_blank">
+            <strong>Contact</strong>
+        </a>
+
+        <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<section class="hero">
+    <img src="me.jpg" alt="My Profile Picture" class="profile-pic">
+
+    <h2>Hello, I'm <span>Carl</span></h2>
+    <p>A creative front-end designer who loves beautiful interfaces.</p>
+</section>
+
+<section class="card">
+    <h2>About Me</h2>
+    <p>I am <strong>Carl Joshua Ando</strong>, a passionate learner designing clean, modern, and user-friendly websites.</p>
+</section>
+
+<section class="card">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">UI Layouting</div>
+        <div class="skill-box">Creativity</div>
+        <div class="skill-box">Communication</div>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A modern personal website showcasing my skills.</p>
+        </div>
+        <div class="project-card">
+            <h3>UI Layout Sample</h3>
+            <p>Clean interface layout created in HTML/CSS.</p>
+        </div>
+        <div class="project-card">
+            <h3>JS Mini Projects</h3>
+            <p>Simple but fun JavaScript interactions.</p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

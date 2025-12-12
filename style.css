@@ -1,0 +1,217 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+/* Color Variables */
+:root {
+    --bg: #69e720;
+    --text: #eaeaea;
+    --card: #1a1a1a;
+    --accent: #5f0e44;
+    --accent2: #422940;
+    --accent-glow: rgba(122, 199, 255, 0.3);
+    --radius: 18px;
+}
+
+body {
+    background:
+        linear-gradient(to right, red, orange),
+        linear-gradient(to bottom, yellow, green),
+        linear-gradient(45deg, blue, purple);
+    background-blend-mode: screen;
+}
+
+/* Smooth transitions */
+body, .card, .header, .login-card, .project-card, .skill-box { 
+    transition: 0.35s ease-in-out; 
+}
+
+/* Centering */
+.centered-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    padding: 20px; 
+}
+
+/* LOGIN */
+.login-card {
+     background:
+        linear-gradient(to right, red, orange),
+        linear-gradient(to bottom, yellow, green),
+        linear-gradient(45deg, blue, purple);
+    background-blend-mode: screen;
+    padding: 40px;
+    width: 360px;
+    border-radius: var(--radius);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+.login-card h2 { margin-bottom: 20px; }
+
+.login-card input {
+    width: 100%; 
+    padding: 14px; 
+    margin: 12px 0;
+    background: #ffffff; 
+    color: black;
+    border: 1px solid #000000;
+    border-radius: var(--radius);
+    font-style: #D3D3D3;
+}
+
+/* RED BUTTON */
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-card button:hover { background: purple; }
+
+#portfolio { display: none; }
+
+/* HEADER */
+.header {
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;
+    padding:20px 40px; 
+    background: rgba(0,0,0,0.25);
+    
+    box-shadow:0 0 15px rgba(54, 54, 54, 0.3);
+    position:sticky; 
+    top:0; 
+    z-index:10;
+}
+
+.logo { font-size: 24px; font-weight: bold; }
+
+.btn-logout {
+    padding: 10px 22px; 
+    background: purple;
+    border:none; 
+    border-radius: var(--radius);
+    color:#fff; 
+    cursor:pointer;
+}
+.btn-logout:hover { opacity: 0.8; }
+
+.contact {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 { font-size: 45px; }
+.hero span { color: var(--accent); }
+
+/* PROFILE PIC */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--accent-glow);
+}
+
+/* CARD */
+.card {
+    width:80%; 
+    max-width:900px;
+    background:
+        linear-gradient(to right, red, orange),
+        linear-gradient(to bottom, yellow, green),
+        linear-gradient(45deg, blue, purple);
+    background-blend-mode: screen;
+    padding:35px;
+    margin:30px auto;
+    border-radius:var(--radius);
+    box-shadow:0 0 25px rgba(0,0,0,0.25);
+    transform:translateY(0);
+    text-align: center;
+}
+.card:hover { 
+    transform:translateY(-6px); 
+    box-shadow:0 0 25px var(--accent-glow); 
+}
+.card h2 {
+    margin-top: 0;
+}
+
+/* SKILLS */
+.skills-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.skill-box {
+    background:var(--accent);
+    padding:15px; 
+    text-align:center;
+    border-radius: var(--radius);
+    color:#fff; 
+    font-weight:bold;
+}
+.skill-box:hover {
+    transform:scale(1.08);
+    background:var(--accent2);
+}
+
+/* PROJECTS */
+.project-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project-card {
+    background:
+        linear-gradient(to right, red, orange),
+        linear-gradient(to bottom, yellow, green),
+        linear-gradient(45deg, blue, purple);
+    background-blend-mode: screen;
+    padding:20px;
+    border-radius:var(--radius);
+    transition:0.3s;
+}
+
+.project-card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 20px var(--accent-glow);
+}
+
+.project-card h3 { margin-bottom:10px; }
